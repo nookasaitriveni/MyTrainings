@@ -27,6 +27,7 @@ git pull sai master
 git fetch sai master
 git checkout develop -> changed to existing branch
 creating neew branch from develop --> present we are in develop --> git checkout -b newbranch
+add changes -- git add -- git commit -- git push pipeline newbranch -- PR creating using url
 
 
 
