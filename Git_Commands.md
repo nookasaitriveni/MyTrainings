@@ -1,1 +1,35 @@
+# Demo-2
+- this is the doc for Demo 2
 
+# GIT (VCS --> Version Control System)
+- **repository** is used to store project folder with all files related to the project.
+- **branch** is used to work with different **versions** of a repository at the same time
+	- By default a repository has a **master** branch (a production branch).
+	- Any other branch is a **copy** of the master branch (as it was at a point in time).
+- **Commits** is the changes we made.
+- **Pull Requests** With a pull request you are **proposing** that your changes should be **merged** (pulled in) with the master. Pull requests show content **differences**, changes, additions, and subtractions in **colors** (green and red). Pull Request have your commits.
+- # Setting up a Project
+  - ```git init .``` to initialize git inside a sample folder
+  - ```git remote add upstream your_repo_clone_or_download_url``` this is the first step where we are adding pipeline or providing a bride between our local and github folders
+  - ```git remote -v``` to check remote version
+  - ``` git pull pipeline master --allow-unrelated-histories ``` this is used to sync the master branch code to our local
+  - ``` git fetch upstream master ``` this is used to get in sync of folders in GitHub
+  - # Till now our LOCAL is READY to use
+- # Checking status of your local
+  - ``` git status ```
+- # Checking Out to ``` develop ``` branch and then checkout to a issue branch and working on it:
+  - ``` git checkout develop ```
+  - ``` git checkout -b my_issue_branch ``` this will create a new sub-branch from base branch develop and then allows user to create a pull request and owner can see the pull request and merge it develop
+  - # Do your changes or work on the issue you want in local and once you are done follow the below commands
+    - ``` git add . ``` this will add your changes to your local repository, but not to github
+    - ``` git add path/to/file.html ``` to only add specific files, because sometimes you want to add only few files, not all your changes
+    - ``` git commit -m 'message_about_your_current_changes' ``` this will help other developers to know about your changes by your message
+    - ```git push upstream my_issue_branch``` this will push your changes and creates a pull request in github.
+    - ## this will generate a link in command prompt, where you need to use that link to create pull request, whick means you are **proposing** that your changes should be **merged** (pulled in) with the master. Pull requests show content **differences**, changes, additions, and subtractions in **colors** (green and red). Pull Request have your commits.
+    - ```git checkout develop``` this will again takes you back to the develop branch
+  - # Comparing your changes
+    - ``` git diff . ```
+    - ``` git diff path/filename.html ``` where it will only changes of the given file
+  - # Removing other changes you don't want in local
+    - ``` git chekcout . ``` this will remove all your changes you made in local
+    - ``` git checkout path/filename.py ``` this will remove only changes mentioned in your file in local
