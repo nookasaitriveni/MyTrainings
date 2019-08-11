@@ -1,88 +1,94 @@
 <!DOCTYPE html>
-     <html>
+<html>
 
-	<head>
-	<title>MyTrainings/Demo2GitHub.md at master · nookasaitriveni/MyTrainings</title>
-	</head>
+<head>
+    <title>MyTrainings/Demo2GitHub.md at master ï¿½ nookasaitriveni/MyTrainings</title>
+</head>
 
-	<h2>Demo-2</h2>
+<h2>Demo-2</h2>
 
-	<ul><li>this is the doc for Demo 2</li></ul>
+<ul>
+    <li>this is the doc for Demo 2</li>
+</ul>
 
-	<h1>GIT (VCS --> Version Control System)</h1>
-	
-	<ul>
-	<li>repository is used to store project folder with all files related to the project.</li>
-	<li>branch is used to work with different versions of a repository at the same time</li>
-	
-	<ul>
-	<li>By default a repository has a master branch (a production branch).</li>
-	<li>Any other branch is a copy of the master branch (as it was at a point in time).</li>
-	</ul>
-	
-	<li>Commits is the changes we made.</li>
-	<li>Pull Requests With a pull request you are proposing that your changes should be merged (pulled in) with the master. Pull requests show content differences, changes, additions, and subtractions in colors (green and red). Pull Request have your commits.</li>
+<h1>GIT (VCS --> Version Control System)</h1>
 
-	<li><h1>Setting up a Project</h1></li>
-	<ul>
-	<li>git init . to initialize git inside a sample folder</li>
-	<li>git remote add upstream your_repo_clone_or_download_url this is the first step where we are adding pipeline or providing a bride between our local and github folders</li>
-	<li>git remote -v to check remote version</Li>
-	<li>git pull pipeline master --allow-unrelated-histories this is used to sync the master branch code to our local</li>
-	<li>git fetch upstream master this is used to get in sync of folders in GitHub</li>
-	<li><h1>Till now our LOCAL is READY to use</h1></li>
-	</ul>
+<ul>
 
-	<li><h1>Checking status of your local<h1></li>
-	<ul>
-	<li>git status</li>
-	</ul>
+    <li>repository is used to store project folder with all files related to the project.</li>
+    <li>branch is used to work with different versions of a repository at the same time</li>
+
+    <ul>
+        <li>By default a repository has a master branch (a production branch).</li>
+        <li>Any other branch is a copy of the master branch (as it was at a point in time).</li>
+    </ul>
+
+    <li>Commits is the changes we made.</li>
+    <li>Pull Requests With a pull request you are proposing that your changes should be merged (pulled in) with the master. Pull requests show content differences, changes, additions, and subtractions in colors (green and red). Pull Request have your commits.</li>
+
+    <li>
+        <h1>Setting up a Project</h1>
+    </li>
+    <ul>
+        <li>git init . to initialize git inside a sample folder</li>
+        <li>git remote add upstream your_repo_clone_or_download_url this is the first step where we are adding pipeline or providing a bride between our local and github folders</li>
+        <li>git remote -v to check remote version</Li>
+        <li>git pull pipeline master --allow-unrelated-histories this is used to sync the master branch code to our local</li>
+        <li>git fetch upstream master this is used to get in sync of folders in GitHub</li>
+        <li>
+            <h1>Till now our LOCAL is READY to use</h1>
+        </li>
+    </ul>
+
+    <li>
+        <h1>Checking status of your local
+            <h1>
+    </li>
+    <ul>
+        <li>git status</li>
+    </ul>
 
 
-	<li><h1>Checking Out to develop branch and then checkout to a issue branch and working on it:</h1></li>
-	<ul>
-	<li>git checkout develop</li>
-	<li>git checkout -b my_issue_branch this will create a new sub-branch from base branch develop and then allows user to create a pull request and owner can see the pull request and merge it develop</li>
-	<li><h1>Do your changes or work on the issue you want in local and once you are done follow the below commands</h1></li>
+    <li>
+        <h1>Checking Out to develop branch and then checkout to a issue branch and working on it:</h1>
+    </li>
+    <ul>
+        <li>git checkout develop</li>
+        <li>git checkout -b my_issue_branch this will create a new sub-branch from base branch develop and then allows user to create a pull request and owner can see the pull request and merge it develop</li>
+        <li>
+            <h1>Do your changes or work on the issue you want in local and once you are done follow the below commands</h1>
+        </li>
         <ul>
-	<li>git add . this will add your changes to your local repository, but not to github</li>
-	<li>git add path/to/file.html to only add specific files, because sometimes you want to add only few files, not all your changes</li>
-	<li>git commit -m 'message_about_your_current_changes' this will help other developers to know about your changes by your message</li>
-	<li>git push upstream my_issue_branch this will push your changes and creates a pull request in github.</li>
-	<li><h3>this will generate a link in command prompt, where you need to use that link to create pull request, whick means you are proposing that your changes should be merged (pulled in) with the master. Pull requests show content differences, changes, additions, and subtractions in colors (green and red). Pull Request have your commits.</h3></li>
-	<li>git checkout develop this will again takes you back to the develop branch</li>	
-	</ul>
+            <li>git add . this will add your changes to your local repository, but not to github</li>
+            <li>git add path/to/file.html to only add specific files, because sometimes you want to add only few files, not all your changes</li>
+            <li>git commit -m 'message_about_your_current_changes' this will help other developers to know about your changes by your message</li>
+            <li>git push upstream my_issue_branch this will push your changes and creates a pull request in github.</li>
+            <li>
+                <h3>this will generate a link in command prompt, where you need to use that link to create pull request, whick means you are proposing that your changes should be merged (pulled in) with the master. Pull requests show content differences,
+                    changes, additions, and subtractions in colors (green and red). Pull Request have your commits.</h3>
+            </li>
+            <li>git checkout develop this will again takes you back to the develop branch</li>
+        </ul>
 
-	<li><h1>Comparing your changes</h1></li>
-	<ul>
-	<li>git diff .</li>
-	<li>git diff path/filename.html where it will only changes of the given file</li>
-	</ul>
-
-
-	<li><h1>Removing other changes you don't want in local</h1></li>
-	<ul>
-	<li>git chekcout . this will remove all your changes you made in local</li>
-	<li>git checkout path/filename.py this will remove only changes mentioned in your file in local</li>
-	</ul>
-
-	</ul>
+        <li>
+            <h1>Comparing your changes</h1>
+        </li>
+        <ul>
+            <li>git diff .</li>
+            <li>git diff path/filename.html where it will only changes of the given file</li>
+        </ul>
 
 
+        <li>
+            <h1>Removing other changes you don't want in local</h1>
+        </li>
+        <ul>
+            <li>git chekcout . this will remove all your changes you made in local</li>
+            <li>git checkout path/filename.py this will remove only changes mentioned in your file in local</li>
+        </ul>
 
+    </ul>
 
-	</ul>
+</ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-	</html> 
+</html>
