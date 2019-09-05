@@ -1,0 +1,19 @@
+body {
+  background-color: lightblue;
+  
+}
+form {
+style="
+    border-left: solid;
+    border-top: solid;
+    border-bottom: solid;
+    border-right: solid;
+    padding-top: 20;
+    padding-bottom: 20;"
+    
+
+}
+
+#my_image {width:100px; height:100px};
+
+
