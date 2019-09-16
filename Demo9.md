@@ -162,3 +162,153 @@ JavaScript variables are containers for storing data values.
         return a * b;             // Function returns the product of a and b
     }
 ```
+# Local Variables
+```sh
+// code here can NOT use carName
+
+function myFunction() {
+  var carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName 
+```
+
+Variables declared within a JavaScript function, become LOCAL to the function.
+
+Local variables can only be accessed from within the function.
+ # How to declare variables
+    var x, y, z; // "declaring" variables.
+- After the declaration, the variable has no value (technically it has the value of `undefined`).
+- In computer programs, variables are often declared without a value. The value can be something that has to be calculated, or something that will be provided later, like user input.
+
+**Rules**:
+- JavaScript does not interpret **VAR** or **Var** as the keyword **var**.
+-   Names can contain letters, digits, underscores, and dollar signs.
+-   Names must begin with a letter
+-   Names can also begin with $ and _
+-   Names are case sensitive (y and Y are different variables)
+-   Reserved words (like JavaScript keywords) cannot be used as names
+- Hyphens are not allowed in JavaScript. They are reserved for subtractions.(first-name)
+Use **Underscore**(first_name), **Upper Camel Case**(FirstName) and **Lower Camel Case**(firstName) *recommended
+- Strings are written inside double or single quotes. Numbers are written without quotes.
+- If you put a number in quotes, it will be treated as a text string.
+- Also we can use a variable to replace text in a element
+- `var person = "John Doe", carName = "Volvo", price = 200;` One Statement, Many Variables
+# How to assign values
+
+    x = 5; y = 6;
+
+# How to compute values
+
+    z = x + y;
+
+
+# Comments
+Code after double slashes `//` or between `/*` and `*/` is treated as a **comment**.
+
+# case sensitive
+The variables `lastName` and `lastname`, are two different variables
+
+# Operators
+| Operator | Description |
+|--|--|
+| + | Addition |
+| - | Subtraction |
+| * | Multiplication |
+|** | Exponentiation(Power) |
+|/|Division|
+| % |Modulus (Division Remainder)|
+|++|Increment|
+| - -| Decrement |
+
+# JavaScript Comparison Operators
+| Operator | Description |
+|--|--|
+| == | equal to |
+|===|equal value and equal type |
+| != | not equal |
+| !== |not equal value or not equal type|
+| > | greater than |
+| < | less than |
+| >= | greater than or equal to |
+| <= | less than or equal to |
+| ? | ternary operator |
+
+# JavaScript Logical Operators
+| Operator | Description |
+|--|--|
+| && | logical and |
+| `||` | logical or |
+| ! |logical not |
+
+# JavaScript Type Operators
+| Operator |Description|
+|--|--|
+|typeof|Returns the type of a variable (`typeof "John"` // Returns "string"  `typeof 3.14` // Returns "number")|
+|instanceof|Returns true if an object is an instance of an object type|
+
+# Data types
+
+    var length = 16; // Number  
+    var lastName = "Johnson"; // String  
+    var x = {firstName:"John", lastName:"Doe"}; // Object
+
+- When adding a number and a string, JavaScript will treat the number as a string.
+	- JavaScript will treat `var x = 16 + "Volvo";` as `var x =  "16" + "Volvo";`
+# JavaScript Arrays
+- `var cars = ["Saab", "Volvo", "BMW"];`
+- Array indexes are zero-based, which means the first item is [0], second is [1], and so on.
+- Changing an Array Element ```cars[0] = "Opel";```
+- cars.length;
+- Accessing the Last Array Element ```cars[cars.length - 1];```
+# Looping Array Elements
+```sh
+for (i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+            (OR)
+fruits.forEach(myFunction);
+function myFunction(value) {
+  console.log(value);
+}           
+```
+- Adding Array Elements ```fruits.push("Lemon");```
+- The Difference Between Arrays and Objects
+    - In JavaScript, arrays use numbered indexes.  
+    - In JavaScript, objects use named indexes.
+    - Arrays are a special kind of objects, with numbered indexes.
+- To check if a variable is array or not (```Array.isArray(fruits); ```)
+- Converting Arrays to Strings ```fruits.toString()``` output would be ```Banana,Orange,Apple,Mango```
+- The join() method also joins all array elements into a string, but it can add symbols
+    - ```fruits.join(" * ")``` output would be ``` Banana * Orange * Apple * Mango ```
+- #### Popping and Pushing in Arrays
+    - When you work with arrays, it is easy to remove elements and add new elements.
+    - This is what popping and pushing is
+    - Popping items out of an array, or pushing items into an array.
+    - ##### Popping
+        - The ```pop()``` method removes the last element from an array
+        - ```fruits.pop();```
+        - we can also assign this to a variable, where it will stroes the removed last element from an array
+    - ##### Pushing
+        - The ```push()``` method adds a new element to an array (at the end)
+        - fruits.push("Kiwi"); 
+        - we can also assign this to a variable, where it will stores the length of the new array
+- #### Shifting Elements
+    - Shifting is equivalent to popping, working on the first element instead of the last.
+    - The shift() method removes the first array element and "shifts" all other elements to a lower index.
+    - ```fruits.shift();```
+    - we can also assign this to a variable, where it will stroes the removed first element from an array
+- #### UnShifting
+- The unshift() method adds a new element to an array (at the beginning)
+- ```fruits.unshift("Lemon");``` // Adds a new element "Lemon" to fruits as a first element
+- we can also assign this to a variable, where it will stores the length of the new array
+- #### Deleting Elements
+    - ```delete fruits[0];      ```     // Changes the first element in fruits to undefined
+    - Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+- #### Merging (Concatenating) Arrays
+    - ```A.concat(B)``` or multiple --> ```arr1.concat(arr2, arr3);``` or custom --> ```arr1.concat(["Emil", "Tobias", "Linus"])```
+    - The concat() method does not change the existing arrays. It always returns a new array.
+- #### Slicing
+    - ```fruits.slice(3)``` //this will remove the first 3 elements
+    - The slice() method creates a new array. It does not remove any elements from the source array
