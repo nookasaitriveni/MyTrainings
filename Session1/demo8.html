@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .dropbtn,
+        .dropbtn2,
+        .dropbtn3,
+        .dropbtn4 {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropbtn {
+            background-color: red;
+        }
+        
+        .dropbtn:hover,
+        .dropbtn:focus,
+        .dropbtn2:hover,
+        .dropbtn2:focus,
+        .dropbtn3:hover,
+        .dropbtn3:focus,
+        .dropbtn4:hover,
+        .dropbtn4:focus {
+            background-color: #2980B9;
+        }
+        
+        .dropdown,
+        .dropdown2,
+        .dropdown3,
+        .dropdown4 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content,
+        .dropdown-content2,
+        .dropdown-content3,
+        .dropdown-content4 {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px, 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown2 a:hover {
+            background-color: #ddd;
+        }
+        
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown2 a:hover {
+            background-color: #ddd;
+        }
+        
+        .dropdown-content3 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown3 a:hover {
+            background-color: #ddd;
+        }
+        
+        .dropdown-content4 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown4 a:hover {
+            background-color: #ddd;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .nav {
+            height: 50px;
+            background-color: red;
+            background-image: linear-gradient(to right, red, yellow);
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            margin-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">TUTORIALS</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="dropdown2">
+            <buttononclick="myFunction()2" class="dropbtn2">REFERENCES</button>
+                <div id="myDropdown2" class="dropdown-content2">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+        </div>
+
+        <div class="dropdown3">
+            <buttononclick="myFunction()3" class="dropbtn3">EXAMPLES</button>
+                <div id="myDropdown3" class="dropdown-content3">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+        </div>
+
+        <div class="dropdown4">
+            <buttononclick="myFunction()4" class="dropbtn4">EXERCISES</button>
+                <div id="myDropdown4" class="dropdown-content4">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var countereven = 0;
+        var lineeven = [];
+
+        var counterodd = 0;
+        var lineodd = [];
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+
+                lineeven[countereven] = i;
+                countereven++
+
+            }
+
+            if (i % 2 == 1) {
+
+                lineodd[counterodd] = i;
+                counterodd++
+
+            }
+        }
+        console.log(lineeven);
+        console.log(lineodd);
+
+
+
+
+        function cToF(celsius) {
+            var cTemp = celsius;
+            var cToFahr = cTemp * 9 / 5 + 32;
+            var message = cTemp + '\xB0C is ' + cToFahr + ' \xB0F.';
+            console.log(message);
+        }
+
+        function fToC(fahrenheit) {
+            var fTemp = fahrenheit;
+            var fToCel = (fTemp - 32) * 5 / 9;
+            var message = fTemp + '\xB0F is ' + fToCel + '\xB0C.';
+            console.log(message);
+        }
+        cToF(60);
+        fToC(45);
+
+
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
